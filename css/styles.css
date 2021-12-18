@@ -54,6 +54,44 @@ body {
     flex-direction: column;
     max-width: 28rem;
 }
+.pop-menu-container {
+display: none;
+opacity: 0;
+background: black;
+color: white;
+position: fixed;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+align-items: flex-start;
+justify-content: center;
+z-index: 99;
+}
+.menuopacity {
+    opacity: 1;
+    display: flex;
+}
+.pop-menu {
+    text-align:center;
+    display: grid;
+    grid-gap: 1rem;
+    color: white; 
+    margin-top: 3rem;   
+}
+.menu-closer {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.hidden-logo {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.hidden-link {
+    color: white;
+    text-decoration: none;
+}
 .header {
     display: flex;
     align-content: center;
@@ -124,7 +162,7 @@ align-items: center;
     width: 100%;
     height: 10px;
     background: linear-gradient(
-        187deg, rgba(2,0,36,1) 15%, rgba(142,142,147,1) 33%, rgba(34,36,37,1) 80%);
+        187deg, rgba(2,0,36,1) 15%, rgb(221 165 8) 33%, rgba(34,36,37,1) 80%);
     background-size: 100% 10px;
 }
 .sale-img {
@@ -234,28 +272,9 @@ font-size: 1.4rem;
 .slider-img-text {
     text-align: center;
     padding-top: .5rem;
-}
-.percentage-img-text {
-    color: #dc0069;
-}
-.hair-img-text {
     color: black;
 }
-.skin-img-text {
-    color: orange;
-}
-.body-img-text {
-    color: purple; 
-}
-.makeup-img-text {
-color:red;
-}
-.ocare-img-text {
-    color:aqua;
-}
-.men-img-text {
-    color:black
-}
+
 .special-offer-container, .new-arrivals-offer-container {
     display: flex;
     justify-content: center;
@@ -336,7 +355,7 @@ font-weight: 700;
     box-sizing: border-box;
 }
 .iwantgift-img {
-max-width: 770px;
+max-width: 1470px;
 max-height: 340px;
 width: 100%;
 }
@@ -410,4 +429,89 @@ width: 60px;
     padding: 1rem;
     font-size: .7rem;
     color: #bfbfbf;
+}
+
+
+/*                             MEDIA QUERIES              */
+@media(min-width: 767px){
+.main-container, .iwantgift-img-container {
+    max-width: 52rem;
+}
+.logo {
+    font-size: 1.5rem;
+}
+.top-line, .middle-line, .bottom-line {
+    border-bottom: 3px solid white;
+    width: 25px;
+}
+.shopping-cart {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.5rem;
+}
+.sale-txt {
+    font-size: 2rem;
+}
+.hb-scent-img {
+    width: 500px;
+}
+.slider-img {
+    width: 120px;
+    height: 120px;
+}
+.special-offer-slider-img {
+    height: 220px;
+    width: 135px;
+}
+.new-arrivals-slider-img {
+    height: 165px;
+    width: 180px;
+}
+.descript-top {
+ padding: .5rem;
+font-size: 1.8rem;
+text-align: center;
+line-height: 1.5;   
+}
+.offtwenty {
+    font-size: 4.4rem;
+}
+.getextra20 {
+  font-size: 1.5rem;  
+}
+.shop-button {
+    bottom: 7px;
+    left:209px;
+    font-size: 1.2rem;
+    padding: .6rem .5rem;
+}
+.pop-menu {
+    font-size: 1.3rem;
+}
+.hidden-logo {
+    font-size: 2.2rem;
+}
+.menu-closer {
+    font-size: 2rem;
+}
+.contact-tel {
+    font-size: 2.5rem;
+}
+.opening-times {
+    font-size: .8rem;
+}
+.join-couponlist-container {
+    margin: 2rem 0;
+}
+.join-couponlist-txt {
+    margin-bottom: 1rem;
+}
+.email-input {
+    width: 75%;
+}
+.email-button {
+    margin-top: 0;
+    margin-left: 10px;
+}
 }
