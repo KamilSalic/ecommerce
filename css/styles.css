@@ -41,7 +41,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /*                         end of reset                                      */
 /* * {
     outline: 1px solid red;
@@ -179,7 +178,9 @@ z-index: 99;
     width: 1rem;
     height: 1rem;
 }
-
+.shopping-cart a {
+    color: white;
+}
 /*         END OF HEADER CONTAINER        */
 /*         START OF SALE CONTAINER        */
 .sale-container {
@@ -187,6 +188,7 @@ z-index: 99;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .sale-img {
     padding-right: .5rem;
@@ -302,9 +304,8 @@ padding-top: .3rem;
     background:transparent;
     scrollbar-width: none; 
 }
- .arrow-container {
+ .circle-sliders-arrows-container, .special-offer-arrows-container, .new-arrivals-arrows-container {
     display: none;
-    visibility: hidden;
 }
 .circle-slider-inner-container {
     margin:0;
@@ -567,6 +568,8 @@ width: 100%;
 }
 .sale-container {
     padding: 0;
+    max-height: 150px;
+    background: #450077;
 }
 .sale-txt {
     font-size: 1.5rem;
@@ -698,6 +701,32 @@ width: 100%;
     padding: .2rem .4rem;
     background: #dc0069;
 }
+.middle-content-outer-container {
+    display: flex;
+    justify-content: center;
+   
+}
+.middle-content-container {
+    max-width: 52rem;
+    margin: 0 6rem;
+    position: relative;
+}
+.midnight-description-container {
+    width: 100%;
+    height: 85%;
+}
+.midnight-img-container {
+    width: 100%;
+    height: 85%;
+    margin: 0;
+}
+.circle-sliders-arrows-container {
+    position: absolute;
+    top: 25rem;
+    display: flex;
+    font-size: 2rem;
+    z-index: 10;
+}
 .circle-slider-img {
     width: 120px;
     height: 120px;  
@@ -708,37 +737,22 @@ width: 100%;
 .special-offer-slider-inner, .new-arrivals-offer-slider-inner {
     margin: 2.5rem 2rem;
 }
-.arrow-absolute-right-container, .arrow-absolute-left-container {
+.special-offer-arrows-container {
     position: absolute;
-    top: 44rem;
-    right: 1rem;
-}
-.arrow-absolute-left-container, .left-arrow-special-offer-container, .left-arrow-new-arrivals-container {
-    left: 0rem;
-}
-.arrow-container {
+    top: 47rem;
     display: flex;
-    position: relative;
-    visibility: visible;
-    align-items: center;
+    font-size: 2rem;
+    z-index: 10;
 }
-.prev, .next { 
-   display: flex;
-   position: absolute;
-
-   font-size:  2rem;
-   color: black;
-   text-decoration: none;
-   background: rgba(251, 249,249, .2);
-   padding: .2rem .7rem;
-   border-radius: 50%;
-   cursor: pointer;
-   z-index: 10;
+.special-offer-img-container {
+    margin: 0 0.6rem;
 }
-.next {
-     right: -.5rem;  
+.new-arrivals-arrows-container {
+position: absolute;
+top: 95rem;
+display: flex;
+font-size: 2rem;
 }
-
 .transRight {
     overflow: visible; 
     transform: translate3d(-435px, 0px, 0px);
@@ -749,58 +763,36 @@ width: 100%;
     transform: translate3d(0px, 0px, 0px);
     transition: all .2s ease-in-out;
 }
-.right-arrow-special-offer-container, .left-arrow-special-offer-container {
+.right-arrow-container {
     position: absolute;
-    top: 64rem;
-    right: 1rem;
+    right: -2rem;
 }
-.special-offer-next-chevron {
-    right: -.5rem;  
+.left-arrow-container {
+    left: -2rem;
 }
-.special-offer-img-container {
-    margin: 0 0.6rem;
-}
-.left-arrow-new-arrivals-container, .right-arrow-new-arrivals-container {
-position: absolute;
-top: 113rem;
-right: 0;
-}
-.next {
-    right: 3.1rem; 
-}
-.prev {
-    left: 4rem;
-}
-.next-new-arrivals {
-    right: 4rem;
-}
-
-
-
-.middle-content-outer-container {
+.arrow-background {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: .5rem;
     display: flex;
-  
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.left-hidden-arrow {
+    display:none;
+}
+.arrow-background:hover {
+    background: rgba(129, 125, 125, 0.384);
 }
 
-.midnight-description-container {
-    width: 100%;
-    height: 85%;
-}
-.midnight-img-container {
-    width: 100%;
-    height: 85%;
-    margin: 0;
-}
-.middle-content-container {
-    max-width: 52rem;
-    margin: 0 6rem;
-   
-}
+
 }
 
 @media (min-width:1300px){
     .outer-container {
         max-width: 300rem;
     }
+    
 }
