@@ -284,7 +284,6 @@ body {
   width: 50%;
   flex-direction: column;
   font-size: 0.9rem;
-  color: #fff;
   font-weight: 600;
 }
 .sale-txt {
@@ -294,6 +293,7 @@ body {
   text-align: center;
   text-align-last: center;
   line-height: 1.2;
+  color: #000000;
 }
 .sale-txt-code {
   color: #83c5be;
@@ -670,6 +670,7 @@ body {
   }
   .sale-txt {
     font-size: 1.5rem;
+    color: #ffffff;
   }
   .sale-txt-code {
     letter-spacing: 0.2rem;
